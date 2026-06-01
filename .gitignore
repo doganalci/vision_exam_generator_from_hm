@@ -1,0 +1,23 @@
+# --- Dynamic data: never committed (large submissions + generated PDFs) ---
+# Everything under data/ is ignored except the structure stub so pull/push never conflicts.
+data/**
+!data/
+!data/README.md
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# --- Streamlit ---
+.streamlit/secrets.toml
