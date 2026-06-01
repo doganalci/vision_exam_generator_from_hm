@@ -11,10 +11,21 @@ cevapla geçilemez.
 Format: **4 soru × 25 puan = 100 puan, 90 dakika** (2 soru öğrencinin kendi teslimine özel +
 2 soru ilgili genel CV kavramları). Sorular İngilizce, TA notları Türkçe.
 
+## Kurulum (macOS + conda)
+
+```bash
+# conda ortamını oluştur ve aktifleştir (Python 3.11 + tüm bağımlılıklar)
+conda env create -f environment.yml
+conda activate cse463-vision
+```
+
+Sonraki tüm `python ...` komutlarını bu aktif ortamda çalıştırın. (conda kullanmıyorsanız
+alternatif: `pip install -r requirements.txt`.)
+
 ## Hızlı başlangıç
 
 ```bash
-pip install -r requirements.txt
+conda activate cse463-vision     # ortam aktif değilse
 
 # 1) Ödevleri işle (her alt klasör = bir öğrenci)
 python tools/ingest_submissions.py --input <ham-klasör> --hw 1 \

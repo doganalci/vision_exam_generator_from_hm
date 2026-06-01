@@ -105,8 +105,11 @@ never earn full marks. See `templates/exam/exam-prompt.md` for the full quality 
 
 ## Reference / further notes
 
-- Python 3.11. Deps: `pymupdf`, `pillow`, `python-docx`, `streamlit` (see
-  `requirements.txt`). `python-docx` and `pillow` have graceful fallbacks if missing.
+- **Environment (macOS + conda):** `conda env create -f environment.yml` then
+  `conda activate cse463-vision`. Run all `python tools/...` commands inside this env.
+  Non-conda alternative: `pip install -r requirements.txt`. Python 3.11; deps are
+  `pymupdf`, `pillow`, `python-docx`, `streamlit` (kept in sync across `environment.yml`
+  and `requirements.txt`). `python-docx` and `pillow` have graceful fallbacks if missing.
 - The web dashboard is intentionally **read-only** — it never calls the LLM. Generation
   stays in Claude Code for cost/quality control (large submissions hit limits in the
   hosted UI; run locally per the CSE 341 lesson).
